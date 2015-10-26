@@ -61,6 +61,7 @@ Ctrl + Alt = click on driver. or webdriver. Attach Source - External Location - 
 Or - Test Project - Properties - Selenium JAR - Fine Attach source - click on edit - External Jar and give path to SRCS
 Review JavaDocs - for all classes and all  packages review. 
 
+Core Java Tutorial : http://www.dineshonjava.com/2013/01/core-java-baby-step-to-be-best-java-ian.html#.Vi5Yhyu79SA
 
 How to Use Firebug and FirePath. 
 

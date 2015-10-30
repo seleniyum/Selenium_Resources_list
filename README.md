@@ -65,4 +65,38 @@ Core Java Tutorial : http://www.dineshonjava.com/2013/01/core-java-baby-step-to-
 
 How to Use Firebug and FirePath. 
 
+Finding Elements
 
+public class FindingElements {
+   public static void main (String[] args) {
+     WebDriver driver = new FirefoxDriver();
+     driver.get("http://www.w3schools.com/");
+     driver.findElement(By.classname("btn")).click();
+     driver.findElement(By.id("gsc-i-id1")).sendKeys("study java");
+     driver.findElement(By.linkText("Learn Bootstrap")).click();
+     driver.findElement(By.name("search")).sendKeys("Search java");
+     driver.findElement(By.partialLinkText("Bootstrap")).click();
+     
+     List<WebElement> list = driver.findElement(By.tagName("a"));
+     System.out.println(list.size());
+     
+     for (int i =0;i<list.size();i++)
+   {  
+   System.out.println(list.get(i).getText());
+     if(list.get(i).getText().equals("Learn CSS")) {
+     list.get(i).click();
+     }
+   }
+     
+      List<WebElement> list = driver.findElements(By.className("btn"));
+     
+     for (int i =0;i<list.size();i++)
+   {  
+   System.out.println(list.get(i).getText());
+     if(list.get(i).getText().equals("JQuery Tutorial")) {
+     list.get(i).click();
+     }
+   }
+     
+     }
+ }

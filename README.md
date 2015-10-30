@@ -16,6 +16,7 @@ Get a GIT account to share this repository.
 TestNG, Maven, Jenkins, ANT, GIT 
 seleniumhq.github.io/selenium/docs/api/java/index.html
 ****Download Java Library and add them to package. Java 2.48.2 2015-10-09  
+Project - Properties - Java Build Path - Libraries Add External Jar (Dont Include SRCS)
 Selenium First Program with Firefox : 
 package TestScripts; 
 import org.openqa.selenium.WebDriver;
@@ -57,9 +58,10 @@ Eclipse - Build a first project
 Link Jar files -except for SRCS file add all of them. 
 Create a first Class - TestJar
 ---Type in same program as Firefox Driver. and show the error issue. as it doesn't show Java Driver. 
-Ctrl + Alt = click on driver. or webdriver. Attach Source - External Location - select SRCS source code. 
-Or - Test Project - Properties - Selenium JAR - Fine Attach source - click on edit - External Jar and give path to SRCS
-Review JavaDocs - for all classes and all  packages review. 
+Ctrl + Alt = click on driver. or webdriver. Attach Source - External Location-External File - select SRCS source code. 
+Or - Test Project RightClick- Properties - Selenium JAR - Find Attach source - click on edit - External Jar and give path to SRCS
+
+----------------------------------------Review JavaDocs - for all classes and all  packages review. 
 
 Core Java Tutorial : http://www.dineshonjava.com/2013/01/core-java-baby-step-to-be-best-java-ian.html#.Vi5Yhyu79SA
 
@@ -100,3 +102,15 @@ public class FindingElements {
      
      }
  }
+-----------------------------------xpath for dynamic examples ---------------------------------------
+
+driver.findElement(By.xpath("//div[@id='leftcol']/a[text()='Learn AngularJS']")).click();
+driver.findElement(By.xpath("//a[@id='gb_70'])).click();
+driver.findElement(By.xpath("//a[starts-with(@id,'gb_7')]")).click();
+driver.findElement(By.xpath("//a[contains(@id,'b_7')]")).click();
+driver.findElement(By.xpath("//div[@id='leftcol']/a[starts-with(text(),'Learn Boots')]")).click();
+driver.findElement(By.xpath("//div[@id='leftcol']/a[contains(text(),'rn Boots')]")).click();
+
+driver.findElement(By.xpath("(//XPATH)[last()]")).click();
+driver.findElement(By.xpath("(//XPATH)[last()-1]")).click();
+driver.findElement(By.xpath("(//XPATH)[position()='1']")).click();
